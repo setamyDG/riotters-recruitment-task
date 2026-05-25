@@ -78,7 +78,7 @@ export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
                 <div className="relative" style={{ width: 131.947, height: 0 }}>
                   <Light1
                     className="absolute block max-w-none"
-                    style={{ left: -208.04, top: -208, width: 547.947, height: 416 }}
+                    style={{ left: -208.04, top: -208, width: 547.947, height: 416, mixBlendMode: 'plus-lighter' }}
                   />
                 </div>
               </div>
@@ -91,7 +91,7 @@ export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
                 <div className="relative" style={{ width: 172.177, height: 0 }}>
                   <Light2
                     className="absolute block max-w-none"
-                    style={{ left: -248.04, top: -248, width: 668.177, height: 496 }}
+                    style={{ left: -248.04, top: -248, width: 668.177, height: 496, mixBlendMode: 'plus-lighter' }}
                   />
                 </div>
               </div>

@@ -44,7 +44,7 @@ export const Blur1 = (props: SvgComponentProps) => (
     fill="none"
     {...props}
   >
-    <g filter="url(#donut-blur1-filter)" style={{ mixBlendMode: 'plus-lighter' }}>
+    <g filter="url(#donut-blur1-filter)">
       <circle cx="146" cy="146" r="138" fill="#F0FFFF" />
     </g>
     <defs>
@@ -109,7 +109,7 @@ export const Light = (props: SvgComponentProps) => (
     fill="none"
     {...props}
   >
-    <g filter="url(#donut-light-filter)" style={{ mixBlendMode: 'plus-lighter' }}>
+    <g filter="url(#donut-light-filter)">
       <circle cx="146.5" cy="146.5" r="138.5" fill="#FFECDD" />
     </g>
     <defs>
@@ -140,7 +140,7 @@ export const Light1 = (props: SvgComponentProps) => (
     fill="none"
     {...props}
   >
-    <g filter="url(#donut-light1-filter)" style={{ mixBlendMode: 'plus-lighter' }}>
+    <g filter="url(#donut-light1-filter)">
       <path
         d="M208 208H273.973H339.947"
         stroke="url(#donut-light1-gradient)"
@@ -188,7 +188,7 @@ export const Light2 = (props: SvgComponentProps) => (
     fill="none"
     {...props}
   >
-    <g filter="url(#donut-light2-filter)" style={{ mixBlendMode: 'plus-lighter' }}>
+    <g filter="url(#donut-light2-filter)">
       <path
         d="M248 248H334.089H420.177"
         stroke="url(#donut-light2-gradient)"
