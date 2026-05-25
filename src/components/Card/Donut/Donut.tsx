@@ -6,7 +6,7 @@ import type { DonutProps } from './Donut.types'
 const ILLUSTRATION_WIDTH = 448
 const ILLUSTRATION_HEIGHT = 452
 const LIGHTS_GROUP_SIZE = 480
-const BEAM_ROTATION_SECONDS = 16
+const BEAM_ROTATION_SECONDS = 12
 
 export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
   <div
@@ -74,7 +74,7 @@ export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
           />
           <motion.div
             className="absolute inset-0"
-            style={{ mixBlendMode: 'plus-lighter' }}
+            style={{ mixBlendMode: 'screen' }}
             animate={{ rotate: 360 }}
             transition={{ duration: BEAM_ROTATION_SECONDS, repeat: Infinity, ease: 'linear' }}
           >

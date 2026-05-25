@@ -49,7 +49,7 @@ npm run preview
 
 <!-- TODO: add deployment link -->
 
-[https://your-deployment-url.com](https://your-deployment-url.com)
+[riotters-recruitment-task.vercel.app](riotters-recruitment-task.vercel.app)
 
 ## Project Decisions
 
