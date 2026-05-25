@@ -1,8 +1,9 @@
 import { motion } from 'motion/react'
-import type { CSSProperties } from 'react'
 
-import { Badge } from '../../Badge'
-import type { DonutProps } from './Donut.types'
+import { Badge } from '../../../Badge'
+import type { Beam, DonutProps, LightLayer } from './Donut.types'
+import { DigitGrid } from './DigitGrid'
+import { LightningIcon } from './LightningIcon'
 
 const ILLUSTRATION_WIDTH = 448
 const ILLUSTRATION_HEIGHT = 452
@@ -12,15 +13,6 @@ const BEAM_ROTATION_SECONDS = 12
 const HALO_WIDTH = 440
 const HALO_HEIGHT = 436
 const HALO_COLOR = '#c7dfff'
-
-interface LightLayer {
-  src: string
-  left: number
-  top: number
-  width: number
-  height: number
-  mixBlendMode?: CSSProperties['mixBlendMode']
-}
 
 const LIGHT_LAYERS: LightLayer[] = [
   { src: '/card-assets/lights/blur.svg', left: 44, top: 44, width: 392, height: 392 },
@@ -42,14 +34,6 @@ const LIGHT_LAYERS: LightLayer[] = [
     mixBlendMode: 'plus-lighter',
   },
 ]
-
-interface Beam {
-  src: string
-  container: { left: number; top: number; width: number; height: number }
-  rotationDeg: number
-  track: { width: number; height: number }
-  image: { left: number; top: number; width: number; height: number }
-}
 
 const BEAMS: Beam[] = [
   {
@@ -78,7 +62,7 @@ const RotatingBeam = ({ src, container, rotationDeg, track, image }: Beam) => (
   </div>
 )
 
-export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
+export const Donut = ({ topLabel, bottomLabel }: DonutProps) => (
   <div
     className="relative overflow-hidden"
     style={{ width: ILLUSTRATION_WIDTH, height: ILLUSTRATION_HEIGHT }}
@@ -142,6 +126,12 @@ export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
         <Badge label={bottomLabel} />
       </div>
     )}
-    <div className="absolute inset-0 flex items-center justify-center">{children}</div>
+    <div className="absolute inset-0 flex items-center justify-center">
+      <DigitGrid>
+        <div className="mt-6">
+          <LightningIcon />
+        </div>
+      </DigitGrid>
+    </div>
   </div>
 )

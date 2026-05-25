@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { LightningIcon } from '../LightningIcon'
+import { LightningIcon } from '.'
 
 describe('LightningIcon', () => {
   it('renders an SVG element', () => {

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { DigitGrid } from '../DigitGrid'
+import { DigitGrid } from '.'
 
 describe('DigitGrid', () => {
   it('renders 90 digit cells (10 rows × 9 cols)', () => {
