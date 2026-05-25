@@ -74,7 +74,7 @@ export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
           />
           <motion.div
             className="absolute inset-0"
-            style={{ mixBlendMode: 'screen' }}
+            style={{ mixBlendMode: 'plus-lighter' }}
             animate={{ rotate: 360 }}
             transition={{ duration: BEAM_ROTATION_SECONDS, repeat: Infinity, ease: 'linear' }}
           >
