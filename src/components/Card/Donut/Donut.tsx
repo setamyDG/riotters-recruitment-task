@@ -32,7 +32,7 @@ export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
           width: LIGHTS_GROUP_SIZE,
           height: LIGHTS_GROUP_SIZE,
           transform: 'translate(-50%, -50%)',
-          filter: 'brightness(1.1) saturate(1.05)',
+          filter: 'brightness(1.2)',
         }}
       >
         <div className="relative size-full">
@@ -51,7 +51,7 @@ export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
               top: 92,
               width: 292,
               height: 292,
-              mixBlendMode: 'plus-lighter',
+              mixBlendMode: 'screen',
             }}
           />
           <img
@@ -69,7 +69,7 @@ export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
               top: 91,
               width: 293,
               height: 293,
-              mixBlendMode: 'plus-lighter',
+              mixBlendMode: 'screen',
             }}
           />
           <motion.div

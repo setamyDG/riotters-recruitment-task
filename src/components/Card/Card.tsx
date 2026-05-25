@@ -47,7 +47,7 @@ export const Card = ({
     <div className="mt-10 flex justify-center xl:mt-18">
       <div className="card-illustration relative overflow-hidden">
         <div className="flex h-full w-full items-center justify-center">
-          <div className="zoom-[0.7148] md:zoom-[1]">
+          <div className="origin-center scale-[0.7] md:scale-100">
             <Donut topLabel={cardIllustrationTopBadge} bottomLabel={cardIllustrationBottomBadge}>
               <DigitGrid>
                 <div className="mt-6">
