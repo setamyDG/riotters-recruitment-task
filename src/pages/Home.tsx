@@ -1,7 +1,7 @@
 import { Card } from '@/components'
 
 export const HomePage = () => (
-  <main className="mx-auto flex min-h-screen items-center justify-center bg-[#f7f9fe]">
+  <main className="mx-auto flex min-h-screen items-center justify-center">
     <Card
       cardBadge="Solution"
       cardTitle="Change the way you approach risk by leveraging the latest technology"

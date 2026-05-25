@@ -6,6 +6,11 @@
   color-scheme: light;
 }
 
+html,
+body {
+  background-color: #f7f9fe;
+}
+
 @layer components {
   .typography {
     color: rgba(11, 27, 42, 1);
