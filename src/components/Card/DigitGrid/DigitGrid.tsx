@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
-import type { ReactNode } from 'react'
+
+import type { DigitGridProps } from './DigitGrid.types'
 
 const ROWS = 10
 const COLS = 9
@@ -12,7 +13,7 @@ const makeGrid = () =>
     Array.from({ length: COLS }, () => (Math.random() > 0.5 ? '1' : '0')),
   )
 
-export const DigitGrid = ({ children }: { children?: ReactNode }) => {
+export const DigitGrid = ({ children }: DigitGridProps) => {
   const grid = makeGrid()
 
   return (

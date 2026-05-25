@@ -1,8 +1,5 @@
 import { Typography } from '../Typography'
-
-interface BadgeProps {
-  label: string
-}
+import type { BadgeProps } from './Badge.types'
 
 export const Badge = ({ label }: BadgeProps) => (
   <div className="badge">

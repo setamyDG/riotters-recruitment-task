@@ -5,20 +5,12 @@ import { Typography } from '../Typography'
 import { DigitGrid } from './DigitGrid'
 import { Donut } from './Donut'
 import { LightningIcon } from './LightningIcon'
-import { CloseIcon } from './CloseIcon'
+import type { CardProps } from './Card.types'
 
 const ENTRANCE = {
   initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] as const },
-}
-
-interface CardProps {
-  cardBadge: string
-  cardTitle: string
-  cardDescription: string
-  cardIllustrationTopBadge: string
-  cardIllustrationBottomBadge: string
 }
 
 export const Card = ({
@@ -35,13 +27,19 @@ export const Card = ({
     transition={ENTRANCE.transition}
   >
     <div className="flex w-full max-w-[480px] flex-col items-center gap-12 xl:contents xl:max-w-none">
-      <img src="/card-assets/logo-icon.svg" alt="" className="h-7 w-[30px] sm:hidden" />
+      <img
+        src="/card-assets/logo-icon.svg"
+        alt="logo icon visible on mobile"
+        className="h-7 w-[30px] sm:hidden"
+      />
       <div className="flex w-full flex-col items-center gap-5 xl:contents">
         <div className="flex flex-col items-center justify-center xl:mt-1">
           <Badge label={cardBadge} />
         </div>
         <div className="flex w-full max-w-[342px] flex-col gap-3 md:max-w-none xl:mt-[86px] xl:gap-4 xl:px-[130px]">
-          <Typography variant="newsreader-400-48">{cardTitle}</Typography>
+          <Typography variant="newsreader-400-48" as="h1">
+            {cardTitle}
+          </Typography>
           <Typography variant="inter-400">{cardDescription}</Typography>
         </div>
       </div>
@@ -60,12 +58,36 @@ export const Card = ({
           </div>
         </div>
         <div className="absolute top-3 right-3 left-3 z-10 flex items-center justify-between md:top-4 md:right-4 md:left-4">
-          <CloseIcon />
-          <CloseIcon />
+          <img
+            src="/card-assets/close-icon.svg"
+            alt="left-top-close-icon"
+            aria-hidden="true"
+            width={23}
+            height={23}
+          />
+          <img
+            src="/card-assets/close-icon.svg"
+            alt="right-top-close-icon"
+            aria-hidden="true"
+            width={23}
+            height={23}
+          />
         </div>
         <div className="absolute right-3 bottom-3 left-3 z-10 flex items-center justify-between md:right-4 md:bottom-4 md:left-4">
-          <CloseIcon />
-          <CloseIcon />
+          <img
+            src="/card-assets/close-icon.svg"
+            alt="left-bottom-close-icon"
+            aria-hidden="true"
+            width={23}
+            height={23}
+          />
+          <img
+            src="/card-assets/close-icon.svg"
+            alt="right-bottom-close-icon"
+            aria-hidden="true"
+            width={23}
+            height={23}
+          />
         </div>
       </div>
     </div>

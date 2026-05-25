@@ -1,18 +1,12 @@
 import { motion } from 'motion/react'
-import type { ReactNode } from 'react'
 
 import { Badge } from '../../Badge'
+import type { DonutProps } from './Donut.types'
 
 const ILLUSTRATION_WIDTH = 448
 const ILLUSTRATION_HEIGHT = 452
 const LIGHTS_GROUP_SIZE = 480
 const BEAM_ROTATION_SECONDS = 16
-
-interface DonutProps {
-  topLabel: string
-  bottomLabel: string
-  children?: ReactNode
-}
 
 export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
   <div
