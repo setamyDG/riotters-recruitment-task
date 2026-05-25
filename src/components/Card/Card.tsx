@@ -37,10 +37,16 @@ export const Card = ({
           <Badge label={cardBadge} />
         </div>
         <div className="flex w-full max-w-[342px] flex-col gap-3 md:max-w-none xl:mt-[86px] xl:gap-4 xl:px-[130px]">
-          <Typography variant="newsreader-400-48" as="h1">
-            {cardTitle}
-          </Typography>
-          <Typography variant="inter-400">{cardDescription}</Typography>
+          <div className="xl:px-26">
+            <Typography variant="newsreader-400-48" as="h1">
+              {cardTitle}
+            </Typography>
+          </div>
+          <div className="xl:px-56">
+            <Typography variant="inter-400" className="whitespace-pre-line">
+              {cardDescription}
+            </Typography>
+          </div>
         </div>
       </div>
     </div>
