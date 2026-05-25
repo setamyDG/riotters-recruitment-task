@@ -2,6 +2,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 @import 'tailwindcss';
 
+@theme {
+  --container-card-mobile: 480px;
+  --container-card-content: 342px;
+
+  --shadow-badge:
+    0px 24px 24px -8px rgba(70, 70, 70, 0.03), 0px 10px 10px -5px rgba(70, 70, 70, 0.03),
+    0px 5px 5px -2.5px rgba(70, 70, 70, 0.03), 0px 3px 3px -1.5px rgba(70, 70, 70, 0.04),
+    0px 2px 2px -1px rgba(70, 70, 70, 0.04), 0px 1px 1px -0.5px rgba(70, 70, 70, 0.03),
+    0px 0px 0px 1px rgba(103, 133, 173, 0.06);
+
+  --shadow-card-illustration-mobile:
+    0px 17.157px 17.157px -5.719px rgba(28, 38, 73, 0.03),
+    0px 7.149px 7.149px -3.574px rgba(28, 38, 73, 0.03),
+    0px 3.574px 3.574px -1.787px rgba(28, 38, 73, 0.03),
+    0px 2.145px 2.145px -1.072px rgba(28, 38, 73, 0.04),
+    0px 1.43px 1.43px -0.715px rgba(28, 38, 73, 0.04),
+    0px 0.715px 0.715px -0.357px rgba(28, 38, 73, 0.03),
+    0px 0px 0px 0.715px rgba(103, 133, 173, 0.06),
+    0px -0.357px 0.715px 0px rgba(14, 63, 126, 0.16) inset,
+    0px 31.455px 31.455px -11.438px rgba(25, 46, 73, 0.12);
+
+  --shadow-card-illustration-desktop:
+    0px 24px 24px -8px rgba(28, 38, 73, 0.03), 0px 10px 10px -5px rgba(28, 38, 73, 0.03),
+    0px 5px 5px -2.5px rgba(28, 38, 73, 0.03), 0px 3px 3px -1.5px rgba(28, 38, 73, 0.04),
+    0px 2px 2px -1px rgba(28, 38, 73, 0.04), 0px 1px 1px -0.5px rgba(28, 38, 73, 0.03),
+    0px 0px 0px 1px rgba(103, 133, 173, 0.06), 0px -0.5px 1px 0px rgba(14, 63, 126, 0.16) inset,
+    0px 44px 44px -16px rgba(25, 46, 73, 0.12);
+}
+
 :root {
   color-scheme: light;
 }
@@ -12,6 +41,17 @@ body {
 }
 
 @layer components {
+  .card-root {
+    width: 1190px;
+  }
+
+  @media (min-width: 1280px) {
+    .card-root {
+      height: 884px;
+      background-image: url('/card-assets/bg.svg');
+    }
+  }
+
   .typography {
     color: rgba(11, 27, 42, 1);
   }
@@ -85,30 +125,14 @@ body {
     width: fit-content;
     align-items: center;
     justify-content: center;
-    box-shadow:
-      0px 24px 24px -8px rgba(70, 70, 70, 0.03),
-      0px 10px 10px -5px rgba(70, 70, 70, 0.03),
-      0px 5px 5px -2.5px rgba(70, 70, 70, 0.03),
-      0px 3px 3px -1.5px rgba(70, 70, 70, 0.04),
-      0px 2px 2px -1px rgba(70, 70, 70, 0.04),
-      0px 1px 1px -0.5px rgba(70, 70, 70, 0.03),
-      0px 0px 0px 1px rgba(103, 133, 173, 0.06);
+    box-shadow: var(--shadow-badge);
   }
 
   .card-illustration {
     border-radius: 20px;
     width: 342px;
     height: 346px;
-    box-shadow:
-      0px 17.157px 17.157px -5.719px rgba(28, 38, 73, 0.03),
-      0px 7.149px 7.149px -3.574px rgba(28, 38, 73, 0.03),
-      0px 3.574px 3.574px -1.787px rgba(28, 38, 73, 0.03),
-      0px 2.145px 2.145px -1.072px rgba(28, 38, 73, 0.04),
-      0px 1.43px 1.43px -0.715px rgba(28, 38, 73, 0.04),
-      0px 0.715px 0.715px -0.357px rgba(28, 38, 73, 0.03),
-      0px 0px 0px 0.715px rgba(103, 133, 173, 0.06),
-      0px -0.357px 0.715px 0px rgba(14, 63, 126, 0.16) inset,
-      0px 31.455px 31.455px -11.438px rgba(25, 46, 73, 0.12);
+    box-shadow: var(--shadow-card-illustration-mobile);
     background:
       linear-gradient(0deg, #fbfcff, #fbfcff),
       linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
@@ -119,16 +143,7 @@ body {
       border-radius: 32px;
       width: 480px;
       height: 484px;
-      box-shadow:
-        0px 24px 24px -8px rgba(28, 38, 73, 0.03),
-        0px 10px 10px -5px rgba(28, 38, 73, 0.03),
-        0px 5px 5px -2.5px rgba(28, 38, 73, 0.03),
-        0px 3px 3px -1.5px rgba(28, 38, 73, 0.04),
-        0px 2px 2px -1px rgba(28, 38, 73, 0.04),
-        0px 1px 1px -0.5px rgba(28, 38, 73, 0.03),
-        0px 0px 0px 1px rgba(103, 133, 173, 0.06),
-        0px -0.5px 1px 0px rgba(14, 63, 126, 0.16) inset,
-        0px 44px 44px -16px rgba(25, 46, 73, 0.12);
+      box-shadow: var(--shadow-card-illustration-desktop);
     }
   }
 

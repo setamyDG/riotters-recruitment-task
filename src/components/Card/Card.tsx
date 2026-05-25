@@ -1,10 +1,7 @@
 import { motion } from 'motion/react'
 
-import { Badge } from '../Badge'
-import { Typography } from '../Typography'
-import { DigitGrid } from './DigitGrid'
-import { Donut } from './Donut'
-import { LightningIcon } from './LightningIcon'
+import { CardContent } from './CardContent'
+import { CardIllustration } from './CardIllustration'
 import type { CardProps } from './Card.types'
 
 const ENTRANCE = {
@@ -14,89 +11,20 @@ const ENTRANCE = {
 }
 
 export const Card = ({
-  cardBadge,
-  cardTitle,
-  cardDescription,
-  cardIllustrationTopBadge,
-  cardIllustrationBottomBadge,
+  badge,
+  title,
+  description,
+  illustrationTopBadge,
+  illustrationBottomBadge,
 }: CardProps) => (
   <motion.div
-    className="flex w-[1190px] flex-col items-center xl:h-[884px] xl:bg-[url('/card-assets/bg.svg')]"
+    className="card-root flex flex-col items-center"
     initial={ENTRANCE.initial}
     animate={ENTRANCE.animate}
     transition={ENTRANCE.transition}
   >
-    <div className="flex w-full max-w-[480px] flex-col items-center gap-12 xl:contents xl:max-w-none">
-      <img
-        src="/card-assets/logo-icon.svg"
-        alt="logo icon visible on mobile"
-        className="h-7 w-[30px] sm:hidden"
-      />
-      <div className="flex w-full flex-col items-center gap-5 xl:contents">
-        <div className="flex flex-col items-center justify-center xl:mt-1">
-          <Badge label={cardBadge} />
-        </div>
-        <div className="flex w-full max-w-[342px] flex-col gap-3 md:max-w-none xl:mt-[86px] xl:gap-4 xl:px-[130px]">
-          <div className="xl:px-26">
-            <Typography variant="newsreader-400-48" as="h1">
-              {cardTitle}
-            </Typography>
-          </div>
-          <div className="xl:px-56">
-            <Typography variant="inter-400" className="whitespace-pre-line">
-              {cardDescription}
-            </Typography>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="mt-10 flex justify-center xl:mt-18">
-      <div className="card-illustration relative overflow-hidden">
-        <div className="flex h-full w-full items-center justify-center">
-          <div className="origin-center scale-[0.7] md:scale-100">
-            <Donut topLabel={cardIllustrationTopBadge} bottomLabel={cardIllustrationBottomBadge}>
-              <DigitGrid>
-                <div className="mt-6">
-                  <LightningIcon />
-                </div>
-              </DigitGrid>
-            </Donut>
-          </div>
-        </div>
-        <div className="absolute top-3 right-3 left-3 z-10 flex items-center justify-between md:top-4 md:right-4 md:left-4">
-          <img
-            src="/card-assets/close-icon.svg"
-            alt="left-top-close-icon"
-            aria-hidden="true"
-            width={23}
-            height={23}
-          />
-          <img
-            src="/card-assets/close-icon.svg"
-            alt="right-top-close-icon"
-            aria-hidden="true"
-            width={23}
-            height={23}
-          />
-        </div>
-        <div className="absolute right-3 bottom-3 left-3 z-10 flex items-center justify-between md:right-4 md:bottom-4 md:left-4">
-          <img
-            src="/card-assets/close-icon.svg"
-            alt="left-bottom-close-icon"
-            aria-hidden="true"
-            width={23}
-            height={23}
-          />
-          <img
-            src="/card-assets/close-icon.svg"
-            alt="right-bottom-close-icon"
-            aria-hidden="true"
-            width={23}
-            height={23}
-          />
-        </div>
-      </div>
-    </div>
+    <CardContent badge={badge} title={title} description={description} />
+    <CardIllustration topBadge={illustrationTopBadge} bottomBadge={illustrationBottomBadge} />
     <img
       src="/card-assets/mobile-line.svg"
       alt=""

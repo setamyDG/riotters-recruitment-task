@@ -1,7 +1,7 @@
 export interface CardProps {
-  cardBadge: string
-  cardTitle: string
-  cardDescription: string
-  cardIllustrationTopBadge: string
-  cardIllustrationBottomBadge: string
+  badge: string
+  title: string
+  description: string
+  illustrationTopBadge: string
+  illustrationBottomBadge: string
 }

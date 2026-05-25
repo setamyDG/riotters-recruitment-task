@@ -1,42 +1,46 @@
 import { render, screen } from '@testing-library/react'
 import { Card } from '../Card'
+import type { CardProps } from './Card.types'
 
-const defaultProps = {
-  cardBadge: 'Solution',
-  cardTitle: 'Test card title',
-  cardDescription: 'Test card description',
-  cardIllustrationTopBadge: 'Evaluate Stock',
-  cardIllustrationBottomBadge: 'Optimize Risk',
+const defaultProps: CardProps = {
+  badge: 'Solution',
+  title: 'Test card title',
+  description: 'Test card description',
+  illustrationTopBadge: 'Evaluate Stock',
+  illustrationBottomBadge: 'Optimize Risk',
 }
+
+const renderCard = (overrides: Partial<CardProps> = {}) =>
+  render(<Card {...defaultProps} {...overrides} />)
 
 describe('Card', () => {
   it('renders the badge', () => {
-    render(<Card {...defaultProps} />)
+    renderCard()
 
     expect(screen.getByText('Solution')).toBeInTheDocument()
   })
 
   it('renders the title', () => {
-    render(<Card {...defaultProps} />)
+    renderCard()
 
     expect(screen.getByText('Test card title')).toBeInTheDocument()
   })
 
   it('renders the description', () => {
-    render(<Card {...defaultProps} />)
+    renderCard()
 
     expect(screen.getByText('Test card description')).toBeInTheDocument()
   })
 
   it('renders the illustration labels', () => {
-    render(<Card {...defaultProps} />)
+    renderCard()
 
     expect(screen.getByText('Evaluate Stock')).toBeInTheDocument()
     expect(screen.getByText('Optimize Risk')).toBeInTheDocument()
   })
 
   it('renders four close icon images', () => {
-    const { container } = render(<Card {...defaultProps} />)
+    const { container } = renderCard()
     const closeIcons = container.querySelectorAll('img[src="/card-assets/close-icon.svg"]')
 
     expect(closeIcons).toHaveLength(4)
