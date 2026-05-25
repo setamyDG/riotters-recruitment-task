@@ -2,7 +2,6 @@ import { motion } from 'motion/react'
 
 import { Badge } from '../../Badge'
 import type { DonutProps } from './Donut.types'
-import { Blur, Blur1, Blur2, Light, Light1, Light2 } from './LightsSvg'
 
 const ILLUSTRATION_WIDTH = 448
 const ILLUSTRATION_HEIGHT = 452
@@ -33,15 +32,19 @@ export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
           width: LIGHTS_GROUP_SIZE,
           height: LIGHTS_GROUP_SIZE,
           transform: 'translate(-50%, -50%)',
-          filter: 'brightness(1.2)',
+          filter: 'brightness(1.1)',
         }}
       >
         <div className="relative size-full">
-          <Blur
+          <img
+            src="/card-assets/lights/blur.svg"
+            alt=""
             className="absolute block max-w-none"
             style={{ left: 44, top: 44, width: 392, height: 392 }}
           />
-          <Blur1
+          <img
+            src="/card-assets/lights/blur1.svg"
+            alt=""
             className="absolute block max-w-none"
             style={{
               left: 98,
@@ -51,11 +54,15 @@ export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
               mixBlendMode: 'plus-lighter',
             }}
           />
-          <Blur2
+          <img
+            src="/card-assets/lights/blur2.svg"
+            alt=""
             className="absolute block max-w-none"
             style={{ left: 14.1, top: 14.1, width: 451.8, height: 451.8 }}
           />
-          <Light
+          <img
+            src="/card-assets/lights/light.svg"
+            alt=""
             className="absolute block max-w-none"
             style={{
               left: 97,
@@ -77,15 +84,11 @@ export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
             >
               <div className="flex-none" style={{ transform: 'rotate(-64.41deg)' }}>
                 <div className="relative" style={{ width: 131.947, height: 0 }}>
-                  <Light1
+                  <img
+                    src="/card-assets/lights/light1.svg"
+                    alt=""
                     className="absolute block max-w-none"
-                    style={{
-                      left: -208.04,
-                      top: -208,
-                      width: 547.947,
-                      height: 416,
-                      mixBlendMode: 'plus-lighter',
-                    }}
+                    style={{ left: -208.04, top: -208, width: 547.947, height: 416 }}
                   />
                 </div>
               </div>
@@ -96,15 +99,11 @@ export const Donut = ({ topLabel, bottomLabel, children }: DonutProps) => (
             >
               <div className="flex-none" style={{ transform: 'rotate(116.57deg)' }}>
                 <div className="relative" style={{ width: 172.177, height: 0 }}>
-                  <Light2
+                  <img
+                    src="/card-assets/lights/light2.svg"
+                    alt=""
                     className="absolute block max-w-none"
-                    style={{
-                      left: -248.04,
-                      top: -248,
-                      width: 668.177,
-                      height: 496,
-                      mixBlendMode: 'plus-lighter',
-                    }}
+                    style={{ left: -248.04, top: -248, width: 668.177, height: 496 }}
                   />
                 </div>
               </div>
