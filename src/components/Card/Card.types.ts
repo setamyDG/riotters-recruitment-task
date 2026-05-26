@@ -1,3 +1,5 @@
+import type { Transition } from 'motion/react'
+
 export interface CardProps {
   badge: string
   title: string
@@ -9,5 +11,5 @@ export interface CardProps {
 export interface EntranceAnimation {
   initial: { opacity: number; y: number }
   animate: { opacity: number; y: number }
-  transition: { duration: number; ease: [number, number, number, number] }
+  transition: Transition
 }

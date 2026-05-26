@@ -1,5 +1,15 @@
+import { motion } from 'motion/react'
+
+import { LIGHTNING_ENTRANCE, lightningTransition } from './LightningIcon.const'
+
 export const LightningIcon = () => (
-  <svg
+  <motion.div
+    className="flex items-center justify-center"
+    initial={LIGHTNING_ENTRANCE.initial}
+    animate={LIGHTNING_ENTRANCE.animate}
+    transition={lightningTransition}
+  >
+    <svg
     width="136"
     height="142"
     viewBox="0 0 136 142"
@@ -173,4 +183,5 @@ export const LightningIcon = () => (
       </linearGradient>
     </defs>
   </svg>
+  </motion.div>
 )

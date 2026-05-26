@@ -1,5 +1,7 @@
 import { motion } from 'motion/react'
 
+import { CardBackground } from './CardBackground'
+import { CardMobileLine } from './CardMobileLine'
 import { CardContent } from './CardContent'
 import { CardIllustration } from './CardIllustration'
 import type { CardProps } from './Card.types'
@@ -18,8 +20,11 @@ export const Card = ({
     animate={ENTRANCE.animate}
     transition={ENTRANCE.transition}
   >
-    <CardContent badge={badge} title={title} description={description} />
-    <CardIllustration topBadge={illustrationTopBadge} bottomBadge={illustrationBottomBadge} />
+    <CardBackground />
+    <div className="relative z-10 flex w-full flex-col items-center">
+      <CardContent badge={badge} title={title} description={description} />
+      <CardIllustration topBadge={illustrationTopBadge} bottomBadge={illustrationBottomBadge} />
+    </div>
     <img
       src="/card-assets/mobile-line.svg"
       alt=""

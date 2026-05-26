@@ -42,13 +42,13 @@ body {
 
 @layer components {
   .card-root {
+    position: relative;
     width: 1190px;
   }
 
   @media (min-width: 1280px) {
     .card-root {
       height: 884px;
-      background-image: url('/card-assets/bg.svg');
     }
   }
 
@@ -89,24 +89,10 @@ body {
     text-align: center;
   }
 
-  @media (min-width: 640px) {
-    .typography-newsreader-400-48 {
-      font-size: 32px;
-      line-height: 36px;
-    }
-  }
-
   @media (min-width: 768px) {
     .typography-newsreader-400-48 {
       font-size: 36px;
       line-height: 40px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .typography-newsreader-400-48 {
-      font-size: 40px;
-      line-height: 44px;
     }
   }
 
