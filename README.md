@@ -1,4 +1,4 @@
-# vite-ts
+# Riotters.com recruitment task
 
 A production-ready React + TypeScript starter built with Vite, featuring a marketing card UI with animated illustrations.
 
@@ -6,7 +6,7 @@ A production-ready React + TypeScript starter built with Vite, featuring a marke
 
 ### Prerequisites
 
-- Node.js >= 20
+- Node.js >= 24
 
 ### Install dependencies
 
