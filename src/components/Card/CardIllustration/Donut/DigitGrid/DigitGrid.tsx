@@ -32,6 +32,14 @@ export const DigitGrid = () => {
           </motion.span>
         ))}
       </div>
+      <img
+        src="/card-assets/mask.svg"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute top-1/2 left-1/2 block max-w-none -translate-x-1/2 -translate-y-1/2 select-none"
+        width={242}
+        height={242}
+      />
       <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
         <div className="mt-6">
           <LightningIcon />
