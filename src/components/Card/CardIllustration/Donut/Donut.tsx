@@ -46,7 +46,6 @@ export const Donut = ({ topLabel, bottomLabel }: DonutProps) => (
           width: LIGHTS_GROUP_SIZE,
           height: LIGHTS_GROUP_SIZE,
           transform: 'translate(-50%, -50%)',
-          filter: 'brightness(1.1)',
         }}
       >
         <div className="relative size-full">
