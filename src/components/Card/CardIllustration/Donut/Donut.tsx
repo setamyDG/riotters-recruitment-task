@@ -46,7 +46,7 @@ export const Donut = ({ topLabel, bottomLabel }: DonutProps) => (
           width: LIGHTS_GROUP_SIZE,
           height: LIGHTS_GROUP_SIZE,
           transform: 'translate(-50%, -50%)',
-          filter: 'brightness(1.2)',
+          filter: 'brightness(1.1)',
         }}
       >
         <div className="relative size-full">
@@ -70,6 +70,7 @@ export const Donut = ({ topLabel, bottomLabel }: DonutProps) => (
           </motion.div>
         </div>
       </div>
+
       <img
         src="/card-assets/ellipse81.svg"
         alt=""

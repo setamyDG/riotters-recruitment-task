@@ -17,7 +17,7 @@ export const LIGHT_LAYERS: LightLayer[] = [
     top: 92,
     width: 292,
     height: 292,
-    // mixBlendMode: 'plus-lighter',
+    mixBlendMode: 'plus-lighter',
   },
   { src: '/card-assets/lights/blur2.svg', left: 14.1, top: 14.1, width: 451.8, height: 451.8 },
   {
@@ -26,7 +26,7 @@ export const LIGHT_LAYERS: LightLayer[] = [
     top: 91,
     width: 293,
     height: 293,
-    // mixBlendMode: 'plus-lighter',
+    mixBlendMode: 'plus-lighter',
   },
 ]
 
