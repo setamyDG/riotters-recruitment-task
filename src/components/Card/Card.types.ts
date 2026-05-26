@@ -5,3 +5,9 @@ export interface CardProps {
   illustrationTopBadge: string
   illustrationBottomBadge: string
 }
+
+export interface EntranceAnimation {
+  initial: { opacity: number; y: number }
+  animate: { opacity: number; y: number }
+  transition: { duration: number; ease: [number, number, number, number] }
+}

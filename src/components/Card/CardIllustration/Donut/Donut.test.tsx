@@ -14,16 +14,6 @@ describe('Donut', () => {
     expect(screen.getByText('Optimize Risk')).toBeInTheDocument()
   })
 
-  it('renders children', () => {
-    render(
-      <Donut topLabel="Top" bottomLabel="Bottom">
-        <div>child content</div>
-      </Donut>,
-    )
-
-    expect(screen.getByText('child content')).toBeInTheDocument()
-  })
-
   it('omits the top badge when topLabel is empty', () => {
     render(<Donut topLabel="" bottomLabel="Bottom" />)
 

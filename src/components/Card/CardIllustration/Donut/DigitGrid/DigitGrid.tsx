@@ -1,20 +1,12 @@
 import { motion } from 'motion/react'
 
-import type { DigitGridProps } from './DigitGrid.types'
+import { ROWS, COLS, STAGGER_STEP, STAGGER_RANGE } from './DigitGrid.const'
+import { LightningIcon } from '../LightningIcon'
 
-const ROWS = 10
-const COLS = 9
-
-const STAGGER_STEP = 0.05
-const STAGGER_RANGE = 16
-
-const makeGrid = () =>
-  Array.from({ length: ROWS }, () =>
+export const DigitGrid = () => {
+  const grid = Array.from({ length: ROWS }, () =>
     Array.from({ length: COLS }, () => (Math.random() > 0.5 ? '1' : '0')),
   )
-
-export const DigitGrid = ({ children }: DigitGridProps) => {
-  const grid = makeGrid()
 
   return (
     <div className="numbers-container flex items-center justify-center">
@@ -48,11 +40,11 @@ export const DigitGrid = ({ children }: DigitGridProps) => {
         width={242}
         height={242}
       />
-      {children && (
-        <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
-          {children}
+      <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
+        <div className="mt-6">
+          <LightningIcon />
         </div>
-      )}
+      </div>
     </div>
   )
 }
