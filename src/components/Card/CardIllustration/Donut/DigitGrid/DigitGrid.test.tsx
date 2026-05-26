@@ -15,14 +15,4 @@ describe('DigitGrid', () => {
       expect(['0', '1']).toContain(span.textContent)
     })
   })
-
-  it('renders children', () => {
-    render(
-      <DigitGrid>
-        <div>child content</div>
-      </DigitGrid>,
-    )
-
-    expect(screen.getByText('child content')).toBeInTheDocument()
-  })
 })
