@@ -1,7 +1,6 @@
 import { motion } from 'motion/react'
 
 import { CardBackground } from './CardBackground'
-import { CardMobileLine } from './CardMobileLine'
 import { CardContent } from './CardContent'
 import { CardIllustration } from './CardIllustration'
 import type { CardProps } from './Card.types'
